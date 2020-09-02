@@ -14,9 +14,7 @@ export default (req, res) => {
   res.setHeader("Content-Type", "image/svg+xml");
 
   try{
-    res.send(`
-
-<?xml version="1.0" encoding="UTF-8"?>
+    res.send(`<?xml version="1.0" encoding="UTF-8"?>
 <svg width="731px" height="194px" viewBox="0 0 731 194" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
     <title>Page 1</title>
@@ -52,8 +50,7 @@ export default (req, res) => {
             <path d="M588.2001,24.3352 C588.2001,11.4472 577.7521,0.9992 564.8641,0.9992 C551.9761,0.9992 541.5281,11.4472 541.5281,24.3352 C541.5281,37.2242 551.9761,47.6712 564.8641,47.6712 C577.7521,47.6712 588.2001,37.2242 588.2001,24.3352" id="Fill-12" fill="#F15A49" mask="url(#mask-6)"></path>
         </g>
     </g>
-</svg>      
-    `);
+</svg>`);
   }
   catch(err){
     return res.send(renderError(err.message, err.secondaryMessage));
